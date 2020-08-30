@@ -38,6 +38,7 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    <link href="css/loading-bar.min.css" rel="stylesheet">
     <link href="css/style.min.css" rel="stylesheet">
 </head>
 
@@ -80,9 +81,18 @@
                     </div>
                 </div>
                 <div class="row text-center">
-                    <div class="col-lg-3 col-md-4 col-sm-6  skills" v-for="skill in skills">
+                    <div class="col-lg-4 col-md-4 col-sm-6  skills" v-for="skill in skills">
                         <img  :src="`${url}/${skill.icon}`" :alt="skill.title">
                         <h4 class="skills-heading">{{skill.title}}</h4>
+                        <div class="row">
+                            <div class="col-md-6 progress_item">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated  bg-success" role="progressbar" :style="`width:${skill.progress}%`" :aria-valuenow="skill.progress" aria-valuemin="0" aria-valuemax="100" >
+                                        {{skill.progress+'%'}}
+                                    </div>
+                                </div>   
+                            </div>
+                        </div>             
                     </div>
                      
                 </div>
@@ -201,6 +211,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery.easing.min.js"></script>
+    <script src="js/loading-bar.min.js"></script>
     <script src="js/script.min.js"></script>
 </body>
 

@@ -21,7 +21,7 @@ a:hover {
     font-weight: 900;
 }
  
-hr {
+  hr {
     border: none;
     width: 90%;
     height: 50px;
@@ -47,6 +47,7 @@ hr {
     background-image: url('../img/icons/loader.gif') ;
     background-position:50% 50%;
 }
+ 
 h1,
 h2,
 h3,
@@ -314,10 +315,13 @@ header.masthead .intro-text .intro-heading {
 .skills {
     margin-top: 15px
 }
-
+.skills .progress_item{
+    display: block;
+    margin: 0 auto;
+}
 .skills img {
-    width: 80px;
-    height: 80px
+    width: 120px;
+    height: 120px
 }
 
 #portfolio .portfolio-item {
