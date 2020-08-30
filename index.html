@@ -1,11 +1,206 @@
 <!DOCTYPE html>
+<!-- 
+██████╗░██████╗░░█████╗░░░░░░██╗███████╗░█████╗░████████╗  ██████╗░██╗░░░██╗
+██╔══██╗██╔══██╗██╔══██╗░░░░░██║██╔════╝██╔══██╗╚══██╔══╝  ██╔══██╗╚██╗░██╔╝
+██████╔╝██████╔╝██║░░██║░░░░░██║█████╗░░██║░░╚═╝░░░██║░░░  ██████╦╝░╚████╔╝░
+██╔═══╝░██╔══██╗██║░░██║██╗░░██║██╔══╝░░██║░░██╗░░░██║░░░  ██╔══██╗░░╚██╔╝░░
+██║░░░░░██║░░██║╚█████╔╝╚█████╔╝███████╗╚█████╔╝░░░██║░░░  ██████╦╝░░░██║░░░
+╚═╝░░░░░╚═╝░░╚═╝░╚════╝░░╚════╝░╚══════╝░╚════╝░░░░╚═╝░░░  ╚═════╝░░░░╚═╝░░░
+
+░█████╗░██████╗░████████╗██╗░░██╗██╗░░░██╗██████╗░  
+██╔══██╗██╔══██╗╚══██╔══╝██║░░██║██║░░░██║██╔══██╗  
+███████║██████╔╝░░░██║░░░███████║██║░░░██║██████╔╝  
+██╔══██║██╔══██╗░░░██║░░░██╔══██║██║░░░██║██╔══██╗  
+██║░░██║██║░░██║░░░██║░░░██║░░██║╚██████╔╝██║░░██║  
+╚═╝░░╚═╝╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░╚═╝░╚═════╝░╚═╝░░╚═╝  
+
+███╗░░░███╗███████╗██╗░░░░░██╗██╗░░██╗██╗░░░██╗░█████╗░███╗░░██╗
+████╗░████║██╔════╝██║░░░░░██║██║░██╔╝╚██╗░██╔╝██╔══██╗████╗░██║
+██╔████╔██║█████╗░░██║░░░░░██║█████═╝░░╚████╔╝░███████║██╔██╗██║
+██║╚██╔╝██║██╔══╝░░██║░░░░░██║██╔═██╗░░░╚██╔╝░░██╔══██║██║╚████║
+██║░╚═╝░██║███████╗███████╗██║██║░╚██╗░░░██║░░░██║░░██║██║░╚███║
+╚═╝░░░░░╚═╝╚══════╝╚══════╝╚═╝╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚══╝
+🇦​​​​​🇷​​​​​🇹​​​​​🇭​​​​​🇺​​​​​🇷​​​​​🇲​​​​​🇪​​​​​🇱​​​​​🇮​​​​​🇰​​​​​🇾​​​​​🇦​​​​​🇳​​​​​.🇬​​​​​🇮​​​​​🇹​​​​​🇭​​​​​🇺​​​​​🇧​​​​​.🇮​​​​​🇴​​​​​
+-->
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta property="og:url" content="https://sedarakelyan.github.io">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="JOURNALIST">
+    <meta property="og:description" content="SEDA'S CV AND PORTFOLIO">
+    <meta property="og:image" content="https://sedarakelyan.github.io/img/fbcover.jpg">
+    <link rel="shortcut icon" href="img/icons/pen-icon.png">
+    <title>Seda's CV and portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
 </head>
-<body>
-    <h1>Hello i'm a Seda!!!</h1>
+
+<body id="page-top">
+    <div id="app">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container"><a class="navbar-brand js-scroll-trigger" href="#page-top">SEDA ARAKELYAN CV</a>
+                 <button
+                    class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                    data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                    aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ml-auto">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
+                     
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" target="_blank"
+                                href="./partials/cv.pdf">Download 
+                                <img style="width:15px" src="./img/icons/8681331601536080157.svg" alt="Download">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <header class="masthead"> 
+            <div class="container">
+                <div class="intro-text"><span id="typetext"></span></div>
+            </div>
+        </header>
+        <section id="skills">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading text-uppercase">Skills</h2>
+                        <!-- <h3 class="section-subheading text-muted">Here are my skills. To be continued...</h3> -->
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-lg-3 col-md-4 col-sm-6  skills" v-for="skill in skills">
+                        <img  :src="`${url}/${skill.icon}`" :alt="skill.title">
+                        <h4 class="skills-heading">{{skill.title}}</h4>
+                    </div>
+                     
+                </div>
+            </div>
+        </section>
+        <section class="bg-light" id="portfolio" v-if="portfolios">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading text-uppercase">Portfolio</h2>
+                        <!-- <h3 class="section-subheading text-muted">To be continued...</h3> -->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6 portfolio-item" v-for="portfolio in portfolios">
+                        <a class="portfolio-link" :data-portfolioid="portfolio.id">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fas fa-3x fa-search-plus"></i>
+                                </div>
+                            </div>
+                            <img class="img-fluid" :src="`${url}/${portfolio.image}`" :alt="portfolio.image">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>{{portfolio.title}}</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="portfolio-modal modal fade" id="portfolioModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal">
+                        <div class="lr">
+                            <div class="rl"></div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-10 mx-auto portfolio_modal_content">
+                                <h2 class="text-uppercase">{{portfolio.title}}</h2>
+                                <ul class="list-inline">
+                                    <li>{{portfolio.date}}</li>
+                                    <li>URL: 
+                                        <a class="siteurl" target="_blank" :href="portfolio.url">{{portfolio.url}}</a>
+                                    </li>
+                                </ul>
+                                    <hr>
+                                    <p class="mt-4">{{portfolio.description}}</p>
+                                    <img class="img-fluid d-block mx-auto" :src="`${url}/${portfolio.image}`" :alt="portfolio.title">
+                                <button class="btn btn-dark" data-dismiss="modal" type="button">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading text-uppercase">Contact me</h2>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <!-- <h5>FIND ME ON SOCIAL NETWORKS</h5> -->
+                                    <ul class="p-0 pt-2">
+                                        <li>
+                                            <img class="contacts_logo" src="./img/icons/phone.svg" alt="phone">
+                                             <span  class="contact_info">
+                                                <a href="#">(+374) 98-19-07-91</a>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <img class="contacts_logo" src="./img/icons/Gmail_Icon.svg" alt="gmail"> 
+                                            <span class="contact_info">
+                                                <a target="_blank"  href="mailto:arakelyanseda77y@gmail.com">arakelyanseda77y@gmail.com</a>
+                                            </span>
+                                        </li>  
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                     
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <span class="copyright bold9">Created by <a href="https://arthurmelikyan.github.io/">Arthur Melikyan</a></span>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="col-md-4 pull-right">
+                            <a href="./partials/cv.pdf" target="_blank"  class="dwn_pdf">
+                                <img style="width:44px" src="./img/icons/1497559403-download_84987.svg"  alt="Download" > 
+                                Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.8/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/script.min.js"></script>
 </body>
+
 </html>
