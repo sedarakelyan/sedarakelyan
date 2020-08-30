@@ -81,7 +81,7 @@
                     </div>
                 </div>
                 <div class="row text-center">
-                    <div class="col-lg-4 col-md-4 col-sm-6  skills" v-for="skill in skills">
+                    <div class="col-lg-4 col-md-4 col-sm-6  skills" v-for="skill in skills" v-if="skill.show">
                         <img  :src="`${url}/${skill.icon}`" :alt="skill.title">
                         <h4 class="skills-heading">{{skill.title}}</h4>
                         <div class="row">
@@ -137,13 +137,13 @@
                                 <h2 class="text-uppercase">{{portfolio.title}}</h2>
                                 <ul class="list-inline">
                                     <li>{{portfolio.date}}</li>
-                                    <li>URL: 
+                                    <li v-if="portfolio.url">URL: 
                                         <a class="siteurl" target="_blank" :href="portfolio.url">{{portfolio.url}}</a>
                                     </li>
                                 </ul>
                                     <hr>
-                                    <p class="mt-4">{{portfolio.description}}</p>
-                                    <img class="img-fluid d-block mx-auto" :src="`${url}/${portfolio.image}`" :alt="portfolio.title">
+                                    <p class="mt-4" v-if="portfolio.description">{{portfolio.description}}</p>
+                                    <img v-if="portfolio.image" class="img-fluid d-block mx-auto" :src="`${url}/${portfolio.image}`" :alt="portfolio.title">
                                 <button class="btn btn-dark" data-dismiss="modal" type="button">
                                     Close
                                 </button>
