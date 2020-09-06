@@ -317,10 +317,11 @@ header.masthead .intro-text .intro-heading {
 }
 .skills .progress_item{
     display: block;
+    width: 150px;
     margin: 0 auto;
 }
 .skills img {
-    width: 120px;
+    width: 150px;
     height: 120px
 }
 
