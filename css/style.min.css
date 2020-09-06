@@ -29,9 +29,7 @@ a:hover {
     box-shadow: 0 20px 20px -20px #333;
     margin: -50px auto 10px
 }
-#mainNav .navbar-brand, #mainNav .navbar-nav .nav-item .nav-link{
-    color: #333;
-}
+ 
 #mainNav.navbar-shrink .navbar-brand,#mainNav.navbar-shrink .navbar-nav .nav-item .nav-link{
     color:#fff;
 }
@@ -172,7 +170,7 @@ img::-moz-selection {
     text-transform: uppercase;
     color: #fff;
     border: 0;
-    background-color: #fed136
+    background-color: #45b649;
 }
  
 
@@ -206,11 +204,17 @@ img::-moz-selection {
         -moz-transition: all .3s;
         transition: all .3s
     }
-
+ 
     #mainNav .navbar-nav .nav-item .nav-link {
-        padding: 1.1em 1em !important
+        padding: 1.1em 1em !important;
+        color: #fff !important;
     }
-
+    .navbar-nav ul li a, .navbar-nav ul li {
+        display: block;
+        margin: 0 auto;
+        text-align: center !important; 
+    }
+   
     #mainNav.navbar-shrink {
         padding-top: 0;
         padding-bottom: 0;
