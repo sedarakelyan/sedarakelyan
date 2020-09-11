@@ -331,7 +331,9 @@ header.masthead .intro-text .intro-heading {
 
 #portfolio .portfolio-item {
     right: 0;
-    margin: 0 0 15px
+    width: 100%;
+    height: 100%;
+    margin: 0 0 15px;
 }
 
 #portfolio .portfolio-item .portfolio-link {
@@ -346,6 +348,7 @@ header.masthead .intro-text .intro-heading {
     position: absolute;
     width: 100%;
     height: 100%;
+    z-index: 666;
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     transition: all ease .5s;

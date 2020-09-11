@@ -110,9 +110,9 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 portfolio-item" v-for="portfolio in portfolios">
                         <a class="portfolio-link" :data-portfolioid="portfolio.id">
                             <div class="portfolio-hover">
-                                <div class="portfolio-hover-content">
+                                <!-- <div class="portfolio-hover-content">
                                     <i class="fas fa-3x fa-search-plus"></i>
-                                </div>
+                                </div> -->
                             </div>
                             <img class="img-fluid" :src="portfolio.image" :alt="portfolio.image">
                         </a>
@@ -134,15 +134,16 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-10 mx-auto portfolio_modal_content">
-                                <h2 class="text-uppercase">{{portfolio.title}}</h2>
+                                {{portfoliobyid}}
+                                <h2 class="text-uppercase">{{portfoliobyid.title}}</h2>
                                 <ul class="list-inline">
-                                    <li>{{portfolio.date}}</li>
+                                    <li>{{portfoliobyid.date}}</li>
                                     <li v-if="portfolio.url">URL: 
-                                        <a class="siteurl" target="_blank" :href="portfolio.url">{{portfolio.url}}</a>
+                                        <a class="siteurl" target="_blank" :href="portfolio.url">{{portfoliobyid.url}}</a>
                                     </li>
                                 </ul>
                                     <hr>
-                                    <p class="mt-4" v-if="portfolio.description">{{portfolio.description}}</p>
+                                    <p class="mt-4" v-if="portfolio.description">{{portfoliobyid.description}}</p>
                                     <img v-if="portfolio.image" class="img-fluid d-block mx-auto" :src="portfolio.image" :alt="portfolio.title">
                                 <button class="btn btn-dark" data-dismiss="modal" type="button">
                                     Close
