@@ -149,6 +149,9 @@
                                         <li v-if="portfoliobyid.url">URL: 
                                             <a class="siteurl" target="_blank" :href="portfoliobyid.url" >{{portfoliobyid.url}}</a>
                                         </li>
+                                        <li v-if="portfoliobyid.date">Created at: 
+                                            <span v-if="portfoliobyid.date">{{portfoliobyid.date}}</span>
+                                        </li>
                                     </ul>
                                     <hr>
                                     <p class="mt-4" v-if="portfoliobyid.description" v-html="portfoliobyid.description"></p>
@@ -211,7 +214,7 @@
                                         <li>
                                             <img class="contacts_logo" src="./img/icons/facebook.svg" alt="facebook"> 
                                             <span class="contact_info">
-                                                <a href="https://www.facebook.com/seda.arakelyan77">Facebook</a>
+                                                <a href="https://www.facebook.com/seda.arakelyan77" target="_blank">Facebook</a>
                                             </span>
                                         </li>  
                                     </ul>
