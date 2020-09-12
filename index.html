@@ -38,7 +38,6 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
-    <link href="css/loading-bar.min.css" rel="stylesheet">
     <link href="css/style.min.css" rel="stylesheet">
 </head>
 
@@ -107,14 +106,15 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-6 portfolio-item" v-for="portfolio in portfolios">
-                        <a class="portfolio-link" :data-portfolioid="portfolio.id">
+                    <div class="col-lg-4 col-md-6 col-sm-6 portfolio-item" v-on:click="get_portfolio_by_id(portfolio.id)" v-for="portfolio in portfolios">
+                        <a class="portfolio-link">
                             <div class="portfolio-hover">
-                                <!-- <div class="portfolio-hover-content">
+                                <div class="portfolio-hover-content">
                                     <i class="fas fa-3x fa-search-plus"></i>
-                                </div> -->
+                                </div>
                             </div>
-                            <img class="img-fluid" :src="portfolio.image" :alt="portfolio.image">
+                            <img  v-if="portfolio.image[0]" class="img-fluid" :src="portfolio.image[0]" :alt="portfolio.image[0]">
+                            <img v-else src="./img/SOC101_Portfolio_Guide.webp" alt="def img">
                         </a>
                         <div class="portfolio-caption">
                             <h4>{{portfolio.title}}</h4>
@@ -134,20 +134,35 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-10 mx-auto portfolio_modal_content">
-                                {{portfoliobyid}}
                                 <h2 class="text-uppercase">{{portfoliobyid.title}}</h2>
-                                <ul class="list-inline">
-                                    <li>{{portfoliobyid.date}}</li>
-                                    <li v-if="portfolio.url">URL: 
-                                        <a class="siteurl" target="_blank" :href="portfolio.url">{{portfoliobyid.url}}</a>
-                                    </li>
-                                </ul>
+                                    <ul class="list-inline"> 
+                                        <li v-if="portfoliobyid.url">URL: 
+                                            <a class="siteurl" target="_blank" :href="portfoliobyid.url">{{portfoliobyid.url}}</a>
+                                        </li>
+                                    </ul>
                                     <hr>
-                                    <p class="mt-4" v-if="portfolio.description">{{portfoliobyid.description}}</p>
-                                    <img v-if="portfolio.image" class="img-fluid d-block mx-auto" :src="portfolio.image" :alt="portfolio.title">
-                                <button class="btn btn-dark" data-dismiss="modal" type="button">
-                                    Close
-                                </button>
+                                    <p class="mt-4" v-if="portfoliobyid.description">{{portfoliobyid.description}}</p>
+                                    
+                                    <div id="slider_wrapper">
+                                        <div id="carousel_ex" class="carousel slide" data-pause="hover" data-interval="3000" data-ride="carousel">
+                                            <div class="carousel-inner"> 
+                                                <div v-if="typeof portfoliobyid.image !== 'undefined' && typeof portfoliobyid.image === 'object'" v-for="(img, index) in portfoliobyid.image" class="carousel-item">
+                                                    <img class="d-block w-100" :src="img" :alt="portfoliobyid.title">
+                                                </div>   
+                                            </div>
+                                            <a class="carousel-control-prev" href="#carousel_ex" role="button" data-slide="prev">
+                                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                              <span class="sr-only">Previous</span>
+                                            </a>
+                                            <a class="carousel-control-next" href="#carousel_ex" role="button" data-slide="next">
+                                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                              <span class="sr-only">Next</span>
+                                            </a>
+                                          </div>
+                                    </div>
+                                    <button class="btn btn-dark" data-dismiss="modal" type="button">
+                                        Close
+                                    </button>
                             </div>
                         </div>
                     </div>
@@ -213,7 +228,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery.easing.min.js"></script>
-    <script src="js/loading-bar.min.js"></script>
     <script src="js/script.min.js"></script>
 </body>
 
