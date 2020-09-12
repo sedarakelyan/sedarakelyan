@@ -68,8 +68,8 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
                      
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" target="_blank"
-                                href="./partials/cv.pdf">Download 
+                        <li class="nav-item" v-if="cv">
+                            <a class="nav-link js-scroll-trigger" target="_blank" :href="cv.sedacv">Download 
                                 <img style="width:15px" src="./img/icons/8681331601536080157.svg" alt="Download">
                             </a>
                         </li>
