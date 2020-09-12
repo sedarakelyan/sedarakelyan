@@ -137,11 +137,11 @@
                                 <h2 class="text-uppercase">{{portfoliobyid.title}}</h2>
                                     <ul class="list-inline"> 
                                         <li v-if="portfoliobyid.url">URL: 
-                                            <a class="siteurl" target="_blank" :href="portfoliobyid.url">{{portfoliobyid.url}}</a>
+                                            <a class="siteurl" target="_blank" :href="portfoliobyid.url" >{{portfoliobyid.url}}</a>
                                         </li>
                                     </ul>
                                     <hr>
-                                    <p class="mt-4" v-if="portfoliobyid.description">{{portfoliobyid.description}}</p>
+                                    <p class="mt-4" v-if="portfoliobyid.description" v-html="portfoliobyid.description"></p>
                                     
                                     <div id="slider_wrapper">
                                         <div id="carousel_ex" class="carousel slide" data-pause="hover" data-interval="3000" data-ride="carousel">
